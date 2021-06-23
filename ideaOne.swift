@@ -21,7 +21,7 @@ class UIMapViewController: UIViewController {
      запускается функция screenActiveForAWhile, заменяющая иконку курьера и
      добавляющая анимацию */
   
-  @IBAction func screenActiveForAWhile(_ sender: Any) {
+  func screenActiveForAWhile(_ sender: Any) {
     self.mapView.carrier = UIImage(named: "jetpack.png")
     UIView.animate(withDuration: 1, delay: 0.25, options: [.autoreverse, .repeat], animations: {
                 self.mapView.carrier.frame.origin.y -= 10
